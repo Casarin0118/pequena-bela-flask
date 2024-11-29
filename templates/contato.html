@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Pequena Bela</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-contato.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img_global/favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div id="navegador">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="/produtos/catalogo.html">Produtos</a></li>
+          <li><a href="#carrinho">Carrinho</a></li>
+          <li><a href="/entrega">Entrega</a></li>
+          <li><a href="/contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+    <hr class="linha">
+
+    <div class="boas_vindas">
+      <h1>Entre em Contato Conosco</h1>
+      <p>Estamos aqui para te ajudar!</p>
+    </div>
+  </header>
+
+  <section class="contato-form">
+    <form method="POST" action="/contato">
+      <input type="text" name="nome" placeholder="Seu Nome" required>
+      <input type="email" name="email" placeholder="Seu E-mail" required>
+      <input type="text" name="assunto" placeholder="Assunto" required>
+      <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Pequena Bela - Moda no tamanho certo para você</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script-contato.js') }}"></script>
+</body>
+
+</html>

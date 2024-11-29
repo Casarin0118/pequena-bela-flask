@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Produtos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/styles-produtos.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img_global/favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div id="navegador">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('produtos') }}">Produtos</a></li>
+          <li><a href="#carrinho">Carrinho</a></li>
+          <li><a href="{{ url_for('entrega') }}">Entrega</a></li>
+          <li><a href="{{ url_for('contato') }}">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+    <hr class="linha">
+
+    <div class="barra_pesquisa">
+      <div class="pesquisa">
+        <input type="text" placeholder="Buscar">
+        <img src="{{ url_for('static', filename='img_global/lupa.png') }}" alt="lupa">
+      </div>
+
+      <div class="bolsa">
+        <img src="{{ url_for('static', filename='img_global/bolsa-de-compras.png') }}" alt="bolsa">
+      </div>
+    </div>
+
+    <div class="boas_vindas">
+      <h1>Bem-vindo à Pequena Bela</h1>
+      <p>Descubra as últimas tendências e promoções exclusivas para você!</p>
+    </div>
+  </header>
+
+  <div class="catalogo">
+    <div class="produto">
+      <img src="https://1259028l.ha.azioncdn.net/img/2024/09/produto/82527/blazer-eliany-detalhes-frente.jpg"
+        alt="Blazer">
+      <p>Blazer Intermediário em Linho Risca de Giz Natural</p>
+      <p class="preco">R$ 289,90</p>
+    </div>
+
+    <div class="produto">
+      <img src="https://1259028l.ha.azioncdn.net/img/2024/09/produto/82547/calca-elizandra-frente-look.jpg"
+        alt="Calça">
+      <p>Calça de Alfaiataria Pantalona Risca de Giz Natural</p>
+      <p class="preco">R$ 289,90</p>
+    </div>
+
+    <div class="produto">
+      <img src="https://1259028l.ha.azioncdn.net/img/2024/09/produto/82703/blusa-eunice-detalhada.jpg"
+        alt="Blusa">
+      <p>Blusa Ombro Só em Viscose Camel Eunice</p>
+      <p class="preco">R$ 289,90</p>
+    </div>
+
+    <div class="produto">
+      <img src="https://1259028l.ha.azioncdn.net/img/2024/09/produto/82553/bermuda-emelie-frente-look.jpg"
+        alt="Bermuda">
+      <p>Bermuda de Alfaiataria Risca de Giz Natural</p>
+      <p class="preco">R$ 289,90</p>
+    </div>
+  </div>
+
+ <div class="catalogo">
+    <div class="produto">
+      <img src="https://1259028l.ha.azioncdn.net/img/2024/09/produto/82497/blusa-elisabeth-detalhes.jpg"
+        alt="Blusa Elisabeth">
+      <p>Blusa Manga Curta Gola V Azul Hortênsia Elisabeth</p>
+      <p class="preco">R$ 289,90</p>
+    </div>
+
+    <div class="produto">
+      <img src="https://1259028l.ha.azioncdn.net/img/2024/09/produto/82509/blusa-francimara-detalhe-frente.jpg"
+        alt="Blusa Francimara">
+      <p>Blusa sem Manga de Crepe Off White Francimara</p>
+      <p class="preco">R$ 289,90</p>
+    </div>
+
+    <div class="produto">
+      <img src="https://1259028l.ha.azioncdn.net/img/2024/09/produto/82541/calca-elise-look-frente.jpg"
+        alt="Calça Elise">
+      <p>Calça Pantalona de Alfaiataria em Viscose Azul Hortênsia Elise</p>
+      <p class="preco">R$ 289,90</p>
+    </div>
+
+    <div class="produto">
+      <img src="https://1259028l.ha.azioncdn.net/img/2024/09/produto/82520/colete-elvira-detalhes-frente.jpg"
+        alt="Colete Elvira">
+      <p>Colete Alongado com Botão Off White Elvira</p>
+      <p class="preco">R$ 289,90</p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo de Frete - Pequena Bela</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles-entrega.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img_global/favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div id="navegador">
+      <nav>
+         <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('produtos') }}">Produtos</a></li>
+        <li><a href="#carrinho">Carrinho</a></li>
+        <li><a href="{{ url_for('entrega') }}">Entrega</a></li>
+        <li><a href="{{ url_for('contato') }}">Contato</a></li>
+      </ul>
+      </nav>
+    </div>
+    <hr class="linha">
+
+    <div class="form-endereco">
+      <h2>Cadastrar Endereço</h2>
+      <form action="/entrega" method="POST">
+        <input type="text" name="rua" placeholder="Rua" required>
+        <input type="text" name="numero" placeholder="Número" required>
+        <input type="text" name="complemento" placeholder="Complemento">
+        <input type="text" name="bairro" placeholder="Bairro" required>
+        <input type="text" name="cidade" placeholder="Cidade" required>
+        <input type="text" name="estado" placeholder="Estado" required>
+        <button type="button" class="botao" onclick="alert('Endereço cadastrado!')">Cadastrar</button>
+      </form>
+    </div>
+    <div class="boas_vindas">
+      <h1>Cálculo de Frete</h1>
+      <p>Informe seu CEP para calcular o frete.</p>
+    </div>
+  </header>
+
+  <section class="calculo-frete">
+    <form id="form-frete">
+      <label for="cep">Digite seu CEP:</label>
+      <input type="text" id="cep" name="cep" placeholder="Digite aqui seu cep">
+      <button type="button" onclick="calcularFrete()">Calcular Frete</button>
+    </form>
+
+    <div id="resultado-frete"></div>
+  </section>
+
+  <footer>
+    <p>Pequena Bela - Moda no tamanho certo para você</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script-entrega.js') }}"></script>
+</body>
+
+</html>

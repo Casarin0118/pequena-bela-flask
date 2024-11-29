@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pequena Bela - Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body style="display:flex; align-items:center; justify-content:center;">
+  <div class="login-page">
+    <div class="form">
+      <!-- Formulário de registro -->
+      <form class="register-form" action="{{ url_for('register') }}" method="POST" enctype="multipart/form-data">
+        <h2><i class="fas fa-lock"></i> Registre-se</h2>
+        <input type="text" name="full_name" placeholder="Nome Completo" required />
+        <input type="text" name="username" placeholder="Nome de Usuário" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Senha" required />
+        <button type="submit">Criar</button>
+        <p class="message">Já tem uma conta? <a href="#" onclick="toggleForms()">Sign In</a></p>
+      </form>
+
+      <!-- Formulário de login -->
+      <form class="login-form" action="{{ url_for('login') }}" method="POST">
+        <a href="{{ url_for('home') }}">
+          <img class="logo" src="{{ url_for('static', filename='login/fotos/Cabeçalho.png') }}" alt="Pequena Bela">
+        </a>
+        <h2><i class="fas fa-lock"></i> Login</h2>
+        <input type="text" name="username" placeholder="Nome de Usuário" required />
+        <input type="password" name="password" placeholder="Senha" required />
+        <button type="submit" name="send2">Login</button>
+        <p class="message">Não tem uma conta? <a href="#" onclick="toggleForms()">Criar uma conta</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function toggleForms() {
+      document.querySelector('.register-form').classList.toggle('hidden');
+      document.querySelector('.login-form').classList.toggle('hidden');
+    }
+  </script>
+</body>
+
+</html>
